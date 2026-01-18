@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://playfrank-casino.de/sitemap.xml

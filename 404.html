@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Seite nicht gefunden - 404</title>
+    <meta name="description" content="Die gesuchte Seite wurde nicht gefunden. PlayFrank Casino 404 Fehlerseite - Navigation zur Startseite oder anderen Bereichen.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://playfrank-casino.de/404">
+    <meta property="og:title" content="Seite nicht gefunden - 404">
+    <meta property="og:description" content="Die gesuchte Seite wurde nicht gefunden. Navigation zur Startseite oder anderen Bereichen.">
+    <meta property="og:image" content="https://playfrank-casino.de/images/404-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://playfrank-casino.de/404">
+    <meta property="twitter:title" content="Seite nicht gefunden - 404">
+    <meta property="twitter:description" content="Die gesuchte Seite wurde nicht gefunden. Navigation zur Startseite oder anderen Bereichen.">
+    <meta property="twitter:image" content="https://playfrank-casino.de/images/404-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e8eaf6 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header - Simplified for 404 page */
+        header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+        }
+        
+        .error-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(26, 35, 126, 0.1);
+        }
+        
+        .error-number {
+            font-size: 12rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .error-message {
+            font-size: 2.5rem;
+            color: #1a237e;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Error Illustration */
+        .error-illustration {
+            max-width: 300px;
+            margin: 0 auto 40px;
+        }
+        
+        .error-illustration img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Navigation Options */
+        .navigation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .nav-card {
+            background-color: #f8f9ff;
+            border: 2px solid #e0e7ff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(57, 73, 171, 0.15);
+            border-color: #3949ab;
+            background-color: #f0f4ff;
+        }
+        
+        .nav-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #3949ab;
+        }
+        
+        .nav-card h3 {
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+        
+        .nav-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Search Form */
+        .search-form {
+            max-width: 500px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            padding-right: 60px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #3949ab;
+            box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.1);
+        }
+        
+        .search-button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: linear-gradient(135deg, #3949ab 0%, #283593 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .search-button:hover {
+            background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+            transform: translateY(-2px);
+        }
+        
+        /* Popular Links - КОРРЕКТНЫЕ ссылки */
+        .popular-links {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .popular-links h3 {
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+        
+        .links-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .link-tag {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f5f7ff;
+            color: #3949ab;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid #e0e7ff;
+        }
+        
+        .link-tag:hover {
+            background-color: #3949ab;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #3949ab 0%, #283593 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(57, 73, 171, 0.2);
+        }
+        
+        .btn-large {
+            padding: 18px 50px;
+            font-size: 1.2rem;
+        }
+        
+        /* Error Details */
+        .error-details {
+            background-color: #f8f9ff;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 40px 0;
+            text-align: left;
+            border-left: 5px solid #3949ab;
+        }
+        
+        .error-details h3 {
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+        
+        .error-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .error-details li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .error-details li:before {
+            content: "•";
+            color: #3949ab;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        /* Footer - Simplified for 404 page - КОРРЕКТНЫЕ ссылки */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 40px 0 20px;
+            margin-top: auto;
+        }
+        
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-menu h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-menu ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-menu li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-menu a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .footer-menu a:hover {
+            color: white;
+        }
+        
+        .footer-certs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        
+        .footer-certs img {
+            height: 40px;
+            width: auto;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-certs img:hover {
+            opacity: 1;
+        }
+        
+        .footer-disclaimer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            line-height: 1.5;
+        }
+        
+        .footer-disclaimer a {
+            color: #FF9800;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 8rem;
+            }
+            
+            .error-message {
+                font-size: 1.8rem;
+            }
+            
+            .error-description {
+                font-size: 1.1rem;
+            }
+            
+            .navigation-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .links-grid {
+                gap: 10px;
+            }
+            
+            .link-tag {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .footer-main {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 6rem;
+            }
+            
+            .error-message {
+                font-size: 1.5rem;
+            }
+            
+            .error-content {
+                padding: 25px;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+                display: block;
+                margin: 10px auto;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .error-illustration {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Utility */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-30 {
+            margin-top: 30px;
+        }
+        
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+        
+        /* Error Reporting */
+        .report-error {
+            background-color: #fff3e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .report-error a {
+            color: #E65100;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="PlayFrank Online Casino Logo - Zurück zur Startseite">
+                PlayFrank
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="error-content">
+                <!-- Error Number -->
+                <div class="error-number">404</div>
+                
+                <!-- Error Illustration -->
+                <div class="error-illustration">
+                    <img src="/images/404-illustration.png" alt="404 Fehler Illustration - Seite nicht gefunden bei PlayFrank Casino">
+                </div>
+                
+                <!-- Error Message -->
+                <h1 class="error-message">Oops! Diese Seite wurde nicht gefunden</h1>
+                
+                <!-- Error Description -->
+                <p class="error-description">
+                    Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben. 
+                    Bitte überprüfen Sie die URL oder nutzen Sie die Navigation unten, 
+                    um zu den verfügbaren Seiten zu gelangen.
+                </p>
+                
+                <!-- Main Action Button -->
+                <div class="mt-30">
+                    <a href="/" class="btn btn-large">
+                        🏠 Zur Startseite
+                    </a>
+                </div>
+                
+                <!-- Search Form -->
+                <div class="search-form">
+                    <h3 class="mb-30">Was suchen Sie?</h3>
+                    <form id="searchForm">
+                        <input type="text" 
+                               class="search-input" 
+                               placeholder="Suchbegriff eingeben..." 
+                               name="q"
+                               aria-label="Suchbegriff">
+                        <button type="button" id="searchButton" class="search-button">
+                            🔍 Suchen
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Navigation Options - КОРРЕКТНЫЕ ссылки на реальные страницы -->
+                <div class="navigation-options">
+                    <a href="/" class="nav-card">
+                        <div class="nav-icon">🎰</div>
+                        <h3>Spiele entdecken</h3>
+                        <p>Über 1000 Casino-Spiele, Slots und Live-Casino</p>
+                    </a>
+                    
+                    <a href="/" class="nav-card">
+                        <div class="nav-icon">🎁</div>
+                        <h3>Bonusangebote</h3>
+                        <p>Willkommensbonus, Freispiele & Promotionen</p>
+                    </a>
+                    
+                    <a href="/kontakt" class="nav-card">
+                        <div class="nav-icon">📞</div>
+                        <h3>Kundenservice</h3>
+                        <p>Live-Chat, Telefon & E-Mail Support</p>
+                    </a>
+                </div>
+                
+                <!-- Popular Links - ТОЛЬКО реальные существующие страницы -->
+                <div class="popular-links">
+                    <h3>Beliebte Seiten</h3>
+                    <div class="links-grid">
+                        <!-- Только страницы, которые мы создали -->
+                        <a href="/" class="link-tag">Startseite</a>
+                        <a href="/kontakt" class="link-tag">Kontakt & Support</a>
+                        <a href="/privacy-policy" class="link-tag">Datenschutz</a>
+                        <a href="/terms-conditions" class="link-tag">AGB</a>
+                        <a href="/responsible-gaming" class="link-tag">Spielerschutz</a>
+                        <a href="/disclaimer" class="link-tag">Disclaimer</a>
+                        <a href="#" class="link-tag">Login</a>
+                        <a href="#" class="link-tag">Bonus</a>
+                    </div>
+                </div>
+                
+                <!-- Error Details -->
+                <div class="error-details">
+                    <h3>Mögliche Gründe für diesen Fehler:</h3>
+                    <ul>
+                        <li>Die Seite wurde verschoben oder umbenannt</li>
+                        <li>Sie haben eine veraltete URL eingegeben</li>
+                        <li>Ein Tippfehler in der Adresse</li>
+                        <li>Die Seite wurde archiviert oder gelöscht</li>
+                        <li>Technische Probleme (selten)</li>
+                    </ul>
+                </div>
+                
+                <!-- Report Error -->
+                <div class="report-error">
+                    <h3>Fehler gefunden?</h3>
+                    <p>Wenn Sie einen defekten Link auf unserer Website gefunden haben, 
+                       teilen Sie uns dies bitte mit: 
+                       <a href="mailto:webmaster@playfrank-casino.de">webmaster@playfrank-casino.de</a>
+                    </p>
+                </div>
+                
+                <!-- Additional Actions -->
+                <div class="mt-30">
+                    <a href="javascript:history.back()" class="btn">
+                        ← Zurück zur vorherigen Seite
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer - КОРРЕКТНЫЕ ссылки на реальные страницы -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div>
+                    <a href="/" class="footer-logo">PlayFrank</a>
+                    <p style="color: #999; font-size: 0.9rem;">PlayFrank ist ein führendes Online-Casino für deutsche Spieler.</p>
+                </div>
+                
+                <div class="footer-menu">
+                    <h3>Hilfe & Support</h3>
+                    <ul>
+                        <li><a href="/kontakt">Kontakt & Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-menu">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <!-- Только реально созданные страницы -->
+                        <li><a href="/terms-conditions">AGB</a></li>
+                        <li><a href="/privacy-policy">Datenschutz</a></li>
+                        <li><a href="/responsible-gaming">Spielerschutz</a></li>
+                        <li><a href="/disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-certs">
+                <img src="/images/footer-18.png" alt="Altersbeschränkung ab 18 Jahren" width="40" height="40">
+                <img src="/images/footer-begambleaware.png" alt="BeGambleAware Zertifizierung" width="40" height="40">
+                <img src="/images/footer-gamban.png" alt="Gamban Spielerschutz" width="40" height="40">
+                <img src="/images/footer-gamcare.png" alt="GamCare verantwortungsvolles Spielen" width="40" height="40">
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p><strong>Wichtiger Hinweis:</strong> Glücksspiel kann süchtig machen. Spielen Sie verantwortungsbewusst und nur mit Geld, das Sie sich leisten können zu verlieren. Mindestalter: 18 Jahre.</p>
+                <p class="mt-30">© 2026 PlayFrank Casino. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://playfrank-casino.de/404/#webpage",
+        "url": "https://playfrank-casino.de/404",
+        "name": "Seite nicht gefunden - PlayFrank Casino 404 Error",
+        "description": "Die gesuchte Seite wurde nicht gefunden. Navigation zur Startseite oder anderen Bereichen.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://playfrank-casino.de/#website",
+            "url": "https://playfrank-casino.de/",
+            "name": "PlayFrank Online Casino",
+            "description": "PlayFrank Online Casino Review 2026 – Erfahrungen, Bonus & Bewertung"
+        },
+        "mainEntity": {
+            "@type": "Message",
+            "text": "Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben. Bitte überprüfen Sie die URL oder nutzen Sie die Navigation, um zu den verfügbaren Seiten zu gelangen.",
+            "url": "https://playfrank-casino.de/"
+        }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+        // Form submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search form handling
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.querySelector('.search-input');
+            
+            if (searchButton && searchInput) {
+                searchButton.addEventListener('click', function() {
+                    const searchTerm = searchInput.value.trim();
+                    
+                    if (!searchTerm) {
+                        // If empty, show message
+                        searchInput.focus();
+                        searchInput.placeholder = "Bitte Suchbegriff eingeben...";
+                        return;
+                    }
+                    
+                    // Simple client-side search simulation
+                    // In a real implementation, this would redirect to search results
+                    const normalizedTerm = searchTerm.toLowerCase();
+                    
+                    // Check for common search terms and redirect accordingly
+                    const searchMap = {
+                        'login': '/login',
+                        'bonus': '/',
+                        'spiele': '/',
+                        'kontakt': '/kontakt',
+                        'datenschutz': '/privacy-policy',
+                        'agb': '/terms-conditions',
+                        'spielerschutz': '/responsible-gaming',
+                        'disclaimer': '/disclaimer',
+                        'live casino': '/',
+                        'mobile': '/',
+                        'zahlung': '/',
+                        'auszahlung': '/'
+                    };
+                    
+                    let redirectUrl = '/';
+                    
+                    // Check for matches
+                    for (const [keyword, url] of Object.entries(searchMap)) {
+                        if (normalizedTerm.includes(keyword)) {
+                            redirectUrl = url;
+                            break;
+                        }
+                    }
+                    
+                    // Redirect to found page or home with search parameter
+                    if (redirectUrl === '/') {
+                        // If no match, redirect to home with search parameter
+                        window.location.href = `/?search=${encodeURIComponent(searchTerm)}`;
+                    } else {
+                        window.location.href = redirectUrl;
+                    }
+                    
+                    // Track search attempt
+                    console.log('Search on 404 page:', searchTerm, '->', redirectUrl);
+                });
+                
+                // Allow Enter key to trigger search
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        searchButton.click();
+                    }
+                });
+            }
+            
+            // Track 404 page view
+            console.log('404 page loaded - URL:', window.location.href);
+            console.log('Referrer:', document.referrer);
+            
+            // Auto-focus search input
+            setTimeout(() => {
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }, 500);
+            
+            // Add animation to error number
+            const errorNumber = document.querySelector('.error-number');
+            if (errorNumber) {
+                errorNumber.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                errorNumber.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            }
+            
+            // Track link clicks for analytics
+            document.querySelectorAll('a[href^="/"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    const linkText = this.textContent.trim();
+                    const linkUrl = this.getAttribute('href');
+                    
+                    console.log('Link clicked from 404 page:', linkText, linkUrl);
+                });
+            });
+            
+            // Handle browser back button better
+            window.addEventListener('pageshow', function(event) {
+                // If page is loaded from cache, scroll to top
+                if (event.persisted) {
+                    window.scrollTo(0, 0);
+                }
+            });
+            
+            // Add current year to footer
+            const currentYear = new Date().getFullYear();
+            const yearElements = document.querySelectorAll('.footer-disclaimer p:last-child');
+            yearElements.forEach(el => {
+                el.innerHTML = el.innerHTML.replace('2026', currentYear);
+            });
+        });
+        
+        // Capture broken link information
+        if (document.referrer && document.referrer.includes('playfrank-casino.de')) {
+            // This 404 came from our own site - could indicate a broken internal link
+            console.warn('Internal broken link detected from:', document.referrer);
+        }
+    </script>
+</body>
+</html>
